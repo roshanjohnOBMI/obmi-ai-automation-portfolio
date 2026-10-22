@@ -13,48 +13,48 @@ export const costing = {
  "apps": [
   {
    "name": "OBMI Revit Tools",
-   "low": 5090.2,
-   "mid": 7431.1,
-   "high": 9772.0,
-   "hand": 8266.7,
+   "low": 5090.225,
+   "mid": 7431.119,
+   "high": 9772.013,
+   "hand": 8266.663,
    "fns": 30
   },
   {
    "name": "OBMI Navisworks Tools",
-   "low": 508.1,
-   "mid": 1223.3,
-   "high": 2243.6,
-   "hand": 1274.6,
+   "low": 508.068,
+   "mid": 1223.342,
+   "high": 2243.621,
+   "hand": 1274.641,
    "fns": 24
   },
   {
    "name": "ACC vs TIDP/MIDP Checker",
-   "low": 91.7,
-   "mid": 138.0,
-   "high": 184.4,
-   "hand": 138.2,
+   "low": 91.717,
+   "mid": 138.04,
+   "high": 184.363,
+   "hand": 138.25,
    "fns": 4
   },
   {
    "name": "ACC Model Health Check",
-   "low": 374.8,
-   "mid": 374.8,
-   "high": 374.8,
+   "low": 374.825,
+   "mid": 374.825,
+   "high": 374.825,
    "hand": 375.0,
    "fns": 4
   },
   {
    "name": "Meridian",
-   "low": 597.5,
-   "mid": 1431.5,
-   "high": 2622.2,
-   "hand": 1480.9,
+   "low": 597.54,
+   "mid": 1431.498,
+   "high": 2622.248,
+   "hand": 1480.86,
    "fns": 9
   },
   {
    "name": "Add-in Control",
    "low": 7.8,
-   "mid": 10.2,
+   "mid": 10.15,
    "high": 12.5,
    "hand": 10.4,
    "fns": 5
@@ -73,10 +73,10 @@ export const costing = {
     "C#",
     "3D review"
    ],
-   "hand": 3337,
-   "mid": 3016.1,
-   "low": 1473,
-   "high": 4559,
+   "hand": 3336.795,
+   "mid": 3016.116,
+   "low": 1473.39,
+   "high": 4558.842,
    "functions": 9,
    "top": {
     "fn": "Resolve Duplicates (Number, Mark, Type Mark)",
@@ -98,10 +98,10 @@ export const costing = {
     "C#",
     "WPF"
    ],
-   "hand": 2470,
-   "mid": 2173.3,
-   "low": 2065,
-   "high": 2282,
+   "hand": 2470.12,
+   "mid": 2173.269,
+   "low": 2064.919,
+   "high": 2281.619,
    "functions": 5,
    "top": {
     "fn": "Auto-Map Clash Code from the clash matrix",
@@ -123,10 +123,10 @@ export const costing = {
     "C#",
     "Excel"
    ],
-   "hand": 2170,
-   "mid": 1978.7,
-   "low": 1397,
-   "high": 2561,
+   "hand": 2169.998,
+   "mid": 1978.674,
+   "low": 1396.686,
+   "high": 2560.662,
    "functions": 5,
    "top": {
     "fn": "Run Health Check (automated and config-compared tests)",
@@ -147,10 +147,10 @@ export const costing = {
     "Revit API",
     "C#"
    ],
-   "hand": 154,
-   "mid": 137.6,
-   "low": 80,
-   "high": 195,
+   "hand": 154.5,
+   "mid": 137.625,
+   "low": 80.5,
+   "high": 194.75,
    "functions": 4,
    "top": {
     "fn": "Load Checked / Unload Checked (many links)",
@@ -172,10 +172,10 @@ export const costing = {
     "C#",
     "Worksets"
    ],
-   "hand": 92,
-   "mid": 85.0,
-   "low": 49,
-   "high": 121,
+   "hand": 91.75,
+   "mid": 85.025,
+   "low": 48.75,
+   "high": 121.3,
    "functions": 4,
    "top": {
     "fn": "Apply Checked (one transaction, creates missing worksets)",
@@ -197,10 +197,10 @@ export const costing = {
     "C#",
     "Excel"
    ],
-   "hand": 44,
-   "mid": 40.4,
-   "low": 26,
-   "high": 55,
+   "hand": 43.5,
+   "mid": 40.41,
+   "low": 25.98,
+   "high": 54.84,
    "functions": 3,
    "top": {
     "fn": "Apply Checked (Type or Instance, group, categories)",
@@ -222,10 +222,10 @@ export const costing = {
     "C#",
     "CSV / Excel"
    ],
-   "hand": 546,
-   "mid": 526.5,
-   "low": 225,
-   "high": 954,
+   "hand": 545.58,
+   "mid": 526.485,
+   "low": 225.16,
+   "high": 953.639,
    "functions": 6,
    "top": {
     "fn": "Filtered results grid across all tests",
@@ -246,10 +246,10 @@ export const costing = {
     "Navisworks API",
     "C#"
    ],
-   "hand": 512,
-   "mid": 495.6,
-   "low": 190,
-   "high": 942,
+   "hand": 511.806,
+   "mid": 495.568,
+   "low": 190.0,
+   "high": 941.515,
    "functions": 4,
    "top": {
     "fn": "Run Parameter Check (all elements in 100-115 files)",
@@ -271,10 +271,10 @@ export const costing = {
     "C#",
     "Dashboard"
    ],
-   "hand": 166,
-   "mid": 155.1,
-   "low": 65,
-   "high": 284,
+   "hand": 165.623,
+   "mid": 155.101,
+   "low": 64.604,
+   "high": 284.394,
    "functions": 5,
    "top": {
     "fn": "Detailed Clash Export (open clashes by zone, file, asset)",
@@ -295,10 +295,10 @@ export const costing = {
     "Navisworks API",
     "C#"
    ],
-   "hand": 38,
-   "mid": 33.4,
-   "low": 20,
-   "high": 47,
+   "hand": 37.5,
+   "mid": 33.375,
+   "low": 19.5,
+   "high": 47.25,
    "functions": 2,
    "top": {
     "fn": "Hide All / Show All",
@@ -320,10 +320,10 @@ export const costing = {
     "C#",
     "HTML export"
    ],
-   "hand": 11,
-   "mid": 9.6,
-   "low": 7,
-   "high": 13,
+   "hand": 10.776,
+   "mid": 9.641,
+   "low": 6.682,
+   "high": 12.601,
    "functions": 5,
    "top": {
     "fn": "Export Viewpoints Report (HTML with a screenshot each)",
@@ -344,10 +344,10 @@ export const costing = {
     "Navisworks API",
     "C#"
    ],
-   "hand": 3,
-   "mid": 3.2,
-   "low": 2,
-   "high": 4,
+   "hand": 3.356,
+   "mid": 3.172,
+   "low": 2.122,
+   "high": 4.222,
    "functions": 2,
    "top": {
     "fn": "Apply to Selected (one tolerance to many tests)",
@@ -369,10 +369,10 @@ export const costing = {
     "Node.js",
     "React"
    ],
-   "hand": 138,
-   "mid": 138.0,
-   "low": 92,
-   "high": 184,
+   "hand": 138.25,
+   "mid": 138.04,
+   "low": 91.717,
+   "high": 184.363,
    "functions": 4,
    "top": {
     "fn": "Match every deliverable and format",
@@ -394,10 +394,10 @@ export const costing = {
     "Design Automation",
     "React"
    ],
-   "hand": 375,
-   "mid": 374.8,
-   "low": 375,
-   "high": 375,
+   "hand": 375.0,
+   "mid": 374.825,
+   "low": 374.825,
+   "high": 374.825,
    "functions": 4,
    "top": {
     "fn": "Run the checks",
@@ -419,10 +419,10 @@ export const costing = {
     "Power BI",
     "React"
    ],
-   "hand": 1481,
-   "mid": 1431.5,
-   "low": 598,
-   "high": 2622,
+   "hand": 1480.86,
+   "mid": 1431.498,
+   "low": 597.54,
+   "high": 2622.248,
    "functions": 9,
    "top": {
     "fn": "Model sharing (incl. NWC and NWD files)",
@@ -444,10 +444,10 @@ export const costing = {
     "Node.js",
     "React"
    ],
-   "hand": 10,
-   "mid": 10.2,
-   "low": 8,
-   "high": 12,
+   "hand": 10.4,
+   "mid": 10.15,
+   "low": 7.8,
+   "high": 12.5,
    "functions": 5,
    "top": {
     "fn": "Run the installer on each PC",
