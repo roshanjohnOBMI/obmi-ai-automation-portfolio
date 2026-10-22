@@ -365,3 +365,28 @@ input[type="range"] { width: 100%; accent-color: var(--blue); height: 6px; curso
 .navtool p { margin: 0 0 0.5rem; }
 .navtool__time b { color: var(--teal); }
 @media (max-width: 720px) { .fnrow { grid-template-columns: 1fr; gap: 0.3rem; } }
+
+/* Overview / Full portfolio switch */
+.viewswitch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--panel); flex: none; }
+.viewswitch a { padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; white-space: nowrap; }
+.viewswitch a:hover { color: var(--ink); }
+.viewswitch a.is-on { background: var(--gold); color: #15171c; }
+@media (max-width: 520px) { .viewswitch a { padding: 0.32rem 0.6rem; font-size: 0.66rem; } .nav__brand span.tag { display: none; } }
+
+.navright { display: flex; align-items: center; gap: 0.5rem; }
+.themebtn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel, var(--sand)); color: var(--ink); cursor: pointer; font-size: 1rem; line-height: 1; display: grid; place-items: center; padding: 0; flex: none; }
+.themebtn:hover { border-color: var(--gold); color: var(--gold); }
+/* Light background */
+:root[data-theme="light"] {
+  --sand: #ffffff; --sand-deep: #eceef2; --paper: #f4f5f7; --ink: #15171c; --ink-soft: #565c66;
+  --blue: #4f6b8a; --gold: #a87100; --teal: #1f7a70; --line: rgba(21, 23, 28, 0.14);
+}
+:root[data-theme="light"] .hero, :root[data-theme="light"] .hero__bg { background: radial-gradient(ellipse at 85% 40%, #e3e8ee 0%, var(--paper) 65%); }
+:root[data-theme="light"] .btn:hover, :root[data-theme="light"] .slider__arrow:hover, :root[data-theme="light"] .tab.is-active, :root[data-theme="light"] .seg.is-active { color: #fff; }
+:root[data-theme="light"] .btn--solid { color: #fff; }
+:root[data-theme="light"] .btn--solid:hover { background: #8d5e00; color: #fff; }
+:root[data-theme="light"] .viewswitch a.is-on { color: #fff; }
+:root[data-theme="light"] .compare__pane--after { background: #d7ebe7; }
+:root[data-theme="light"] .calc__track u { background: rgba(21, 23, 28, 0.6); }
+:root[data-theme="light"] .nav__logo { filter: invert(1) brightness(0.15); }
+:root[data-theme="light"] .nav { box-shadow: 0 1px 0 var(--line); }

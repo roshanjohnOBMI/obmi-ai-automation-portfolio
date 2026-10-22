@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Hero from "./components/Hero.jsx";
 import Meridian from "./components/Meridian.jsx";
 import Ribbons from "./components/Ribbons.jsx";
@@ -10,6 +11,21 @@ import AutomationSlider from "./components/AutomationSlider.jsx";
 import TimeCalculator from "./components/TimeCalculator.jsx";
 import BeforeAfter from "./components/BeforeAfter.jsx";
 import Stack from "./components/Stack.jsx";
+
+function ThemeButton() {
+  const [theme, setTheme] = useState(() => document.documentElement.getAttribute("data-theme") || "dark");
+  const flip = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("obmi-theme", next); } catch (e) {}
+    setTheme(next);
+  };
+  return (
+    <button type="button" className="themebtn" onClick={flip} aria-label={theme === "dark" ? "Switch to light background" : "Switch to dark background"} title={theme === "dark" ? "Light background" : "Dark background"}>
+      {theme === "dark" ? "\u2600" : "\u263E"}
+    </button>
+  );
+}
 
 export default function App() {
   return (
@@ -28,8 +44,14 @@ export default function App() {
           <a href="#time">Time saved</a>
           <a href="#compare">Before / after</a>
           <a href="#film">Film</a>
-          <a href="./overview.html">Overview</a>
         </nav>
+        <div className="navright">
+          <div className="viewswitch" role="group" aria-label="Switch view">
+            <a href="./overview.html">Overview</a>
+            <a href="./index.html" className="is-on" aria-current="page">Full portfolio</a>
+          </div>
+          <ThemeButton />
+        </div>
       </header>
 
       <main id="top">
