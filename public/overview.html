@@ -69,6 +69,20 @@ footer{padding:50px 0 60px;border-top:1px solid var(--line);text-align:center}
 footer img{height:30px;margin:0 auto 14px}
 footer p{margin:.2rem 0;font-size:.85rem;color:var(--soft)}
 .tagline{font-size:clamp(1.2rem,2.6vw,1.7rem);font-weight:700;margin-bottom:12px}
+footer .built{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);margin-top:22px}
+footer .made{margin:.9rem 0 1.6rem;font-size:.78rem}
+.crew{display:grid;justify-items:center;gap:30px}
+.crew figure{margin:0;text-align:center}
+.crew img{border-radius:50%;object-fit:cover;margin:0 auto 10px;height:auto;border:2px solid var(--line);background:#fff}
+.crew figcaption b{display:block;font-size:.85rem;font-weight:700;color:var(--ink)}
+.crew figcaption span{display:block;font-size:.72rem;color:var(--soft);letter-spacing:.03em}
+.crew .lead img{width:168px;height:168px;border:3px solid var(--gold);box-shadow:0 0 0 7px rgba(252,190,38,.14),0 18px 40px rgba(0,0,0,.45)}
+.crew .lead figcaption b{font-size:1.15rem}
+.crew .lead figcaption span{color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.members{display:flex;flex-wrap:wrap;justify-content:center;gap:26px 34px}
+.members figure{width:150px}
+.members img{width:96px;height:96px}
+footer .fine{margin-top:34px;font-size:.74rem}
 @media (max-width:860px){
  .hero,.two{grid-template-columns:1fr}
  .stats{grid-template-columns:1fr 1fr}
@@ -177,8 +191,22 @@ footer p{margin:.2rem 0;font-size:.85rem;color:var(--soft)}
   <div class="wrap">
     <img src="./brand/obmi-wordmark-offwhite.png" alt="OBMI" />
     <p class="tagline">Elevate life, <em>by design.</em></p>
-    <p>Built by Roshan Kerketta, BIM Manager and Automation &amp; Solutions Developer, OBMI.</p>
-    <p>Internal overview. Figures are planning estimates; the film uses illustrative characters and demo data.</p>
+    <p class="built">Built by OBMI</p>
+    <p class="eyebrow made">Created by Fred and Team</p>
+    <div class="crew">
+      <figure class="lead">
+        <img src="./media/team/fred.jpg" alt="Frederic" />
+        <figcaption><b>Frederic</b><span>Lead</span></figcaption>
+      </figure>
+      <div class="members">
+        <figure><img src="./media/team/roshan.jpg" alt="Roshan Kerketta" /><figcaption><b>Roshan Kerketta</b><span>BIM Manager</span></figcaption></figure>
+        <figure><img src="./media/team/bharathi.jpg" alt="Bharathi" /><figcaption><b>Bharathi</b><span>Technical Architect, BIM Architect</span></figcaption></figure>
+        <figure><img src="./media/team/muthu.jpg" alt="Muthukumar Ramasamy" /><figcaption><b>Muthukumar Ramasamy</b><span>BIM Manager</span></figcaption></figure>
+        <figure><img src="./media/team/chandu.jpg" alt="Chandra Shekhar Tamaada" /><figcaption><b>Chandra Shekhar Tamaada</b><span>BIM Coordinator</span></figcaption></figure>
+        <figure><img src="./media/team/shifkhan.jpg" alt="Shifkhan" /><figcaption><b>Shifkhan</b></figcaption></figure>
+      </div>
+    </div>
+    <p class="fine">Internal overview. Figures are planning estimates; the film uses illustrative characters and demo data.</p>
   </div>
 </footer>
 </body>
