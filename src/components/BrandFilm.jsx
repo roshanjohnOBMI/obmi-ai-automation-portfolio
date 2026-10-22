@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { FILM_SRC, FILM_POSTER } from "../data/storyboard.js";
-import { costing } from "../data/costing.js";
-import { n0 } from "../lib/fmt.js";
 
 const shots = [
   { img: "costing-summary", title: "Summary view", note: "Hours saved a month, by application." },
@@ -21,11 +19,6 @@ export default function BrandFilm() {
         <video src={FILM_SRC} poster={FILM_POSTER} controls playsInline preload="none" />
       </div>
 
-      <div className="section__head costing__head">
-        <p className="eyebrow">Behind the numbers</p>
-        <h3>The costing app: {n0(costing.total.mid)} hours a month, {costing.total.functions} functions.</h3>
-        <p className="muted">An explorer built to size the saving per tool, with slicers, ranges and a what-if table. Planning estimates, not measurements.</p>
-      </div>
       <div className="costing">
         <figure className="costing__shot" key={s.img}>
           <img src={`./media/costing/${s.img}.jpg`} alt={`OBMI time-saved explorer, ${s.title}`} />

@@ -342,3 +342,5 @@ input[type="range"] { width: 100%; accent-color: var(--blue); height: 6px; curso
 @media (max-width: 860px) {
   .compare__pane--before .compare__what, .compare__pane--after .compare__what, .compare__pane--after .compare__sub { max-width: 22ch; font-size: 1rem; }
 }
+
+.costing { margin-top: 3.5rem; }
