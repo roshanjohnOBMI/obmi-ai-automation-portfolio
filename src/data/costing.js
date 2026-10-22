@@ -84,7 +84,90 @@ export const costing = {
     "basis": "Renumbering duplicate marks and numbers one by one.",
     "handH": 0.55,
     "toolH": 0.04
-   }
+   },
+   "fns": [
+    {
+     "fn": "Resolve Duplicates (Number, Mark, Type Mark)",
+     "unit": "per model",
+     "basis": "Renumbering duplicate marks and numbers one by one.",
+     "handH": 0.55,
+     "toolH": 0.04,
+     "handMonth": 476.7,
+     "savedMonth": 442.0
+    },
+    {
+     "fn": "Resolve Overlaps (wall/wall, floor/floor, wall and room line)",
+     "unit": "per model",
+     "basis": "Cutting geometry or shortening room lines one overlap at a time.",
+     "handH": 0.55,
+     "toolH": 0.04,
+     "handMonth": 476.7,
+     "savedMonth": 442.0
+    },
+    {
+     "fn": "Repair Sketches (off-axis lines)",
+     "unit": "per model",
+     "basis": "Opening each sketch and straightening lines so the loop stays closed.",
+     "handH": 0.55,
+     "toolH": 0.04,
+     "handMonth": 476.7,
+     "savedMonth": 442.0
+    },
+    {
+     "fn": "Repair Constraints, Clean Up Rooms, Correct Alignment",
+     "unit": "per model",
+     "basis": "Fixing constraint, room and slightly-off-axis wall warnings individually.",
+     "handH": 0.55,
+     "toolH": 0.055,
+     "handMonth": 476.7,
+     "savedMonth": 429.0
+    },
+    {
+     "fn": "Resolve Joins",
+     "unit": "per model",
+     "basis": "Unjoining and re-joining element pairs one at a time with the right priority.",
+     "handH": 0.5,
+     "toolH": 0.04,
+     "handMonth": 433.4,
+     "savedMonth": 398.7
+    },
+    {
+     "fn": "Export CSV, Excel, JSON and summary",
+     "unit": "per model",
+     "basis": "Copying the warnings list into Excel for the BIM report.",
+     "handH": 0.3,
+     "toolH": 0.015,
+     "handMonth": 260.0,
+     "savedMonth": 247.0
+    },
+    {
+     "fn": "Collect Warnings and the model-health dashboard",
+     "unit": "per model",
+     "basis": "Opening Review Warnings and scrolling a long, ungrouped list with no counts.",
+     "handH": 0.3,
+     "toolH": 0.025,
+     "handMonth": 260.0,
+     "savedMonth": 238.3
+    },
+    {
+     "fn": "Review One by One (show in 3D, fix this one)",
+     "unit": "per model",
+     "basis": "Selecting each element pair, isolating it in 3D and fixing it by hand.",
+     "handH": 0.35,
+     "toolH": 0.1,
+     "handMonth": 303.3,
+     "savedMonth": 216.7
+    },
+    {
+     "fn": "Filter and search (category, severity, fix-by, text)",
+     "unit": "per model",
+     "basis": "Reading the list to find which warnings belong together.",
+     "handH": 0.2,
+     "toolH": 0.015,
+     "handMonth": 173.3,
+     "savedMonth": 160.3
+    }
+   ]
   },
   {
    "id": "clash-parameters",
@@ -109,7 +192,54 @@ export const costing = {
     "basis": "Looking up each category's code in the clash matrix and entering it by hand.",
     "handH": 2.0,
     "toolH": 0.25
-   }
+   },
+   "fns": [
+    {
+     "fn": "Auto-Map Clash Code from the clash matrix",
+     "unit": "per model",
+     "basis": "Looking up each category's code in the clash matrix and entering it by hand.",
+     "handH": 2.0,
+     "toolH": 0.25,
+     "handMonth": 1733.4,
+     "savedMonth": 1516.7
+    },
+    {
+     "fn": "Dashboard: Run Analysis (missing code and zone by category)",
+     "unit": "per run",
+     "basis": "Counting elements with a blank Clash Code or Zone, category by category, with schedules and filters.",
+     "handH": 0.2,
+     "toolH": 0.01,
+     "handMonth": 173.3,
+     "savedMonth": 164.7
+    },
+    {
+     "fn": "Parameter Coverage and missing-parameter CSV",
+     "unit": "per check",
+     "basis": "Finding which categories the parameter is not bound to, one category at a time, and listing them for the parameter owner.",
+     "handH": 0.2,
+     "toolH": 0.01,
+     "handMonth": 173.3,
+     "savedMonth": 164.7
+    },
+    {
+     "fn": "Assign Values (by category, selection or preview rows)",
+     "unit": "per batch",
+     "basis": "Selecting elements category by category and typing the value into Properties.",
+     "handH": 0.2,
+     "toolH": 0.01,
+     "handMonth": 173.3,
+     "savedMonth": 164.7
+    },
+    {
+     "fn": "Import / Export values through CSV or Excel",
+     "unit": "per round trip",
+     "basis": "Editing values in schedules or exporting by hand and re-keying them.",
+     "handH": 1.0,
+     "toolH": 0.25,
+     "handMonth": 216.7,
+     "savedMonth": 162.5
+    }
+   ]
   },
   {
    "id": "model-health-check-add-in",
@@ -134,7 +264,54 @@ export const costing = {
     "basis": "Manually inspecting links, grids and levels, worksets, views and templates against the checklist.",
     "handH": 1.5,
     "toolH": 0.115
-   }
+   },
+   "fns": [
+    {
+     "fn": "Run Health Check (automated and config-compared tests)",
+     "unit": "per model",
+     "basis": "Manually inspecting links, grids and levels, worksets, views and templates against the checklist.",
+     "handH": 1.5,
+     "toolH": 0.115,
+     "handMonth": 1300.1,
+     "savedMonth": 1200.4
+    },
+    {
+     "fn": "Export Excel report",
+     "unit": "per model",
+     "basis": "Writing the findings up in a report.",
+     "handH": 0.4,
+     "toolH": 0.015,
+     "handMonth": 346.7,
+     "savedMonth": 333.7
+    },
+    {
+     "fn": "Review Fail and Needs review rows",
+     "unit": "per model",
+     "basis": "Reading findings and recording what to fix.",
+     "handH": 0.45,
+     "toolH": 0.075,
+     "handMonth": 390.0,
+     "savedMonth": 325.0
+    },
+    {
+     "fn": "Choose disciplines and tests (143 tests in 5 disciplines)",
+     "unit": "per model",
+     "basis": "Working out which checklist items apply to this model.",
+     "handH": 0.15,
+     "toolH": 0.015,
+     "handMonth": 130.0,
+     "savedMonth": 117.0
+    },
+    {
+     "fn": "Test Settings (naming, worksets, levels, angles)",
+     "unit": "per project change",
+     "basis": "Documenting the project standard so tests have something to compare against.",
+     "handH": 0.75,
+     "toolH": 0.15,
+     "handMonth": 3.2,
+     "savedMonth": 2.6
+    }
+   ]
   },
   {
    "id": "link-loader",
@@ -158,7 +335,45 @@ export const costing = {
     "basis": "Right-click each link in Manage Links: Unload or Reload.",
     "handH": 0.15,
     "toolH": 0.015
-   }
+   },
+   "fns": [
+    {
+     "fn": "Load Checked / Unload Checked (many links)",
+     "unit": "per use",
+     "basis": "Right-click each link in Manage Links: Unload or Reload.",
+     "handH": 0.15,
+     "toolH": 0.015,
+     "handMonth": 97.5,
+     "savedMonth": 87.8
+    },
+    {
+     "fn": "Filter by name and status; Check All / Uncheck All",
+     "unit": "per use",
+     "basis": "Scrolling Manage Links and picking rows one at a time.",
+     "handH": 0.06,
+     "toolH": 0.007,
+     "handMonth": 39.0,
+     "savedMonth": 34.1
+    },
+    {
+     "fn": "Unload for me (workshared models)",
+     "unit": "per use",
+     "basis": "Using Unload for me per link.",
+     "handH": 0.075,
+     "toolH": 0.007,
+     "handMonth": 11.3,
+     "savedMonth": 10.1
+    },
+    {
+     "fn": "Tick Revit Selection",
+     "unit": "per use",
+     "basis": "Selecting link instances and finding them in Manage Links.",
+     "handH": 0.045,
+     "toolH": 0.007,
+     "handMonth": 6.8,
+     "savedMonth": 5.6
+    }
+   ]
   },
   {
    "id": "workset-assigner",
@@ -183,7 +398,45 @@ export const costing = {
     "basis": "Selecting elements and using the workset drop-down repeatedly; creating worksets by hand.",
     "handH": 0.6,
     "toolH": 0.04
-   }
+   },
+   "fns": [
+    {
+     "fn": "Apply Checked (one transaction, creates missing worksets)",
+     "unit": "per model",
+     "basis": "Selecting elements and using the workset drop-down repeatedly; creating worksets by hand.",
+     "handH": 0.6,
+     "toolH": 0.04,
+     "handMonth": 39.0,
+     "savedMonth": 36.4
+    },
+    {
+     "fn": "Preview (will move, already correct, in groups, owned by others)",
+     "unit": "per model",
+     "basis": "Selecting category by category and checking each element's current workset.",
+     "handH": 0.5,
+     "toolH": 0.03,
+     "handMonth": 32.5,
+     "savedMonth": 30.6
+    },
+    {
+     "fn": "Save / Load Config (share rules between models)",
+     "unit": "per model",
+     "basis": "Re-creating the same selection logic in each model.",
+     "handH": 0.35,
+     "toolH": 0.015,
+     "handMonth": 15.7,
+     "savedMonth": 15.1
+    },
+    {
+     "fn": "Write rules (category, family, type to workset)",
+     "unit": "per rule set",
+     "basis": "Planning workset assignment and noting it down before selecting by category.",
+     "handH": 0.45,
+     "toolH": 0.15,
+     "handMonth": 4.5,
+     "savedMonth": 3.0
+    }
+   ]
   },
   {
    "id": "shared-parameters",
@@ -208,7 +461,36 @@ export const costing = {
     "basis": "Manage > Project Parameters: add each parameter, pick its group, tick its categories (~2 min each, 30-60 parameters).",
     "handH": 1.15,
     "toolH": 0.075
-   }
+   },
+   "fns": [
+    {
+     "fn": "Apply Checked (Type or Instance, group, categories)",
+     "unit": "per model",
+     "basis": "Manage > Project Parameters: add each parameter, pick its group, tick its categories (~2 min each, 30-60 parameters).",
+     "handH": 1.15,
+     "toolH": 0.075,
+     "handMonth": 34.5,
+     "savedMonth": 32.2
+    },
+    {
+     "fn": "Preview (will add, will extend, already bound)",
+     "unit": "per model",
+     "basis": "Checking which parameters already exist and which categories are missing, parameter by parameter.",
+     "handH": 0.225,
+     "toolH": 0.025,
+     "handMonth": 6.7,
+     "savedMonth": 6.0
+    },
+    {
+     "fn": "Export Template from a shared parameter file",
+     "unit": "per file",
+     "basis": "Typing each shared-parameter definition into a spreadsheet.",
+     "handH": 0.375,
+     "toolH": 0.015,
+     "handMonth": 2.2,
+     "savedMonth": 2.2
+    }
+   ]
   },
   {
    "id": "clash-approval",
@@ -233,7 +515,63 @@ export const costing = {
     "basis": "No cross-test filter exists: browsing results test by test and filtering by status, distance and approver.",
     "handH": 4.5,
     "toolH": 0.15
-   }
+   },
+   "fns": [
+    {
+     "fn": "Filtered results grid across all tests",
+     "unit": "per cycle",
+     "basis": "No cross-test filter exists: browsing results test by test and filtering by status, distance and approver.",
+     "handH": 4.5,
+     "toolH": 0.15,
+     "handMonth": 116.9,
+     "savedMonth": 113.0
+    },
+    {
+     "fn": "Load Asset Info (Element ID, family, type, workset, file)",
+     "unit": "per cycle",
+     "basis": "Selecting each clashing item and reading its properties; no bulk property pull exists.",
+     "handH": 4.5,
+     "toolH": 0.15,
+     "handMonth": 116.9,
+     "savedMonth": 113.0
+    },
+    {
+     "fn": "Approve / Resolve Selected (records who and when)",
+     "unit": "per cycle",
+     "basis": "No bulk approve exists: approving results one by one and recording who and when by hand.",
+     "handH": 4.5,
+     "toolH": 0.175,
+     "handMonth": 116.9,
+     "savedMonth": 112.4
+    },
+    {
+     "fn": "Export CSV / Import CSV (review round trip)",
+     "unit": "per cycle",
+     "basis": "No round trip exists: writing results out and re-keying decisions made elsewhere.",
+     "handH": 3.0,
+     "toolH": 0.075,
+     "handMonth": 77.9,
+     "savedMonth": 76.0
+    },
+    {
+     "fn": "Test summary grid (New, Active, Reviewed, Approved, Resolved)",
+     "unit": "per cycle",
+     "basis": "No summary view exists: opening each of ~100 tests in Clash Detective and reading its counts.",
+     "handH": 2.25,
+     "toolH": 0.035,
+     "handMonth": 58.5,
+     "savedMonth": 57.5
+    },
+    {
+     "fn": "Comments: add, edit, delete",
+     "unit": "per cycle",
+     "basis": "Typing comments result by result in the native panel; nothing is shared across tests.",
+     "handH": 2.25,
+     "toolH": 0.15,
+     "handMonth": 58.5,
+     "savedMonth": 54.6
+    }
+   ]
   },
   {
    "id": "parameter-checker",
@@ -257,7 +595,45 @@ export const costing = {
     "basis": "Opening each of 100-115 models and checking schedules or properties for gaps (~4-10 min per model).",
     "handH": 14.0,
     "toolH": 0.45
-   }
+   },
+   "fns": [
+    {
+     "fn": "Run Parameter Check (all elements in 100-115 files)",
+     "unit": "per scan",
+     "basis": "Opening each of 100-115 models and checking schedules or properties for gaps (~4-10 min per model).",
+     "handH": 14.0,
+     "toolH": 0.45,
+     "handMonth": 363.7,
+     "savedMonth": 352.0
+    },
+    {
+     "fn": "Export CSV / Excel; double-click to isolate in 3D",
+     "unit": "per scan",
+     "basis": "Writing up missing elements and locating each one.",
+     "handH": 3.0,
+     "toolH": 0.075,
+     "handMonth": 77.9,
+     "savedMonth": 76.0
+    },
+    {
+     "fn": "Dashboard (files scanned, elements missing, by file)",
+     "unit": "per scan",
+     "basis": "Compiling gaps by file.",
+     "handH": 2.25,
+     "toolH": 0.075,
+     "handMonth": 58.5,
+     "savedMonth": 56.5
+    },
+    {
+     "fn": "Set required parameters and file scope",
+     "unit": "per scan",
+     "basis": "Listing what must be present and in which files.",
+     "handH": 0.45,
+     "toolH": 0.025,
+     "handMonth": 11.7,
+     "savedMonth": 11.0
+    }
+   ]
   },
   {
    "id": "clash-analyser",
@@ -282,7 +658,54 @@ export const costing = {
     "basis": "Compiling element-level clash lists by zone, source file and asset.",
     "handH": 2.25,
     "toolH": 0.15
-   }
+   },
+   "fns": [
+    {
+     "fn": "Detailed Clash Export (open clashes by zone, file, asset)",
+     "unit": "per cycle",
+     "basis": "Compiling element-level clash lists by zone, source file and asset.",
+     "handH": 2.25,
+     "toolH": 0.15,
+     "handMonth": 58.5,
+     "savedMonth": 54.6
+    },
+    {
+     "fn": "Run Analysis: dashboard tiles (status and severity)",
+     "unit": "per cycle",
+     "basis": "Counting results per test and status in Clash Detective and Excel.",
+     "handH": 1.5,
+     "toolH": 0.125,
+     "handMonth": 39.0,
+     "savedMonth": 35.7
+    },
+    {
+     "fn": "Categories & Matrix: category mapping and matrix validation",
+     "unit": "per cycle",
+     "basis": "Checking the clash matrix against the test list by hand.",
+     "handH": 1.125,
+     "toolH": 0.075,
+     "handMonth": 29.2,
+     "savedMonth": 27.3
+    },
+    {
+     "fn": "Trend chart across past runs",
+     "unit": "per cycle",
+     "basis": "Keeping run-by-run history in a spreadsheet.",
+     "handH": 0.75,
+     "toolH": 0.015,
+     "handMonth": 19.5,
+     "savedMonth": 19.1
+    },
+    {
+     "fn": "Tile filters and Clash Tests table with CSV / Excel export",
+     "unit": "per cycle",
+     "basis": "Filtering and exporting per-test summaries.",
+     "handH": 0.75,
+     "toolH": 0.04,
+     "handMonth": 19.5,
+     "savedMonth": 18.4
+    }
+   ]
   },
   {
    "id": "hide-by-category",
@@ -306,7 +729,27 @@ export const costing = {
     "basis": "Resetting visibility category by category.",
     "handH": 0.175,
     "toolH": 0.007
-   }
+   },
+   "fns": [
+    {
+     "fn": "Filter, select categories, Hide Selected / Show Selected",
+     "unit": "per use",
+     "basis": "Building a search or selection per category and hiding it.",
+     "handH": 0.115,
+     "toolH": 0.015,
+     "handMonth": 28.7,
+     "savedMonth": 25.0
+    },
+    {
+     "fn": "Hide All / Show All",
+     "unit": "per use",
+     "basis": "Resetting visibility category by category.",
+     "handH": 0.175,
+     "toolH": 0.007,
+     "handMonth": 8.8,
+     "savedMonth": 8.4
+    }
+   ]
   },
   {
    "id": "viewpoint-comments",
@@ -331,7 +774,54 @@ export const costing = {
     "basis": "Capturing and captioning a screenshot per viewpoint.",
     "handH": 1.25,
     "toolH": 0.15
-   }
+   },
+   "fns": [
+    {
+     "fn": "Export Viewpoints Report (HTML with a screenshot each)",
+     "unit": "per report (~60 viewpoints)",
+     "basis": "Capturing and captioning a screenshot per viewpoint.",
+     "handH": 1.25,
+     "toolH": 0.15,
+     "handMonth": 5.4,
+     "savedMonth": 4.8
+    },
+    {
+     "fn": "List viewpoints with comment counts and last comment",
+     "unit": "per report",
+     "basis": "Stepping through Saved Viewpoints one at a time.",
+     "handH": 0.4,
+     "toolH": 0.015,
+     "handMonth": 1.7,
+     "savedMonth": 1.7
+    },
+    {
+     "fn": "Add, edit and delete comments",
+     "unit": "per report",
+     "basis": "Using the native panel per viewpoint.",
+     "handH": 0.4,
+     "toolH": 0.075,
+     "handMonth": 1.7,
+     "savedMonth": 1.4
+    },
+    {
+     "fn": "Export comments (CSV / Excel)",
+     "unit": "per report",
+     "basis": "Copying comments out one by one.",
+     "handH": 0.3,
+     "toolH": 0.015,
+     "handMonth": 1.3,
+     "savedMonth": 1.2
+    },
+    {
+     "fn": "Export Viewpoints (XML: camera, clipping, comments)",
+     "unit": "per report",
+     "basis": "Exporting and archiving viewpoint definitions by hand.",
+     "handH": 0.3,
+     "toolH": 0.015,
+     "handMonth": 0.6,
+     "savedMonth": 0.6
+    }
+   ]
   },
   {
    "id": "clash-tolerance",
@@ -355,7 +845,27 @@ export const costing = {
     "basis": "Opening each test's properties and typing the tolerance (~30 s each across ~100 tests).",
     "handH": 0.7,
     "toolH": 0.035
-   }
+   },
+   "fns": [
+    {
+     "fn": "Apply to Selected (one tolerance to many tests)",
+     "unit": "per change",
+     "basis": "Opening each test's properties and typing the tolerance (~30 s each across ~100 tests).",
+     "handH": 0.7,
+     "toolH": 0.035,
+     "handMonth": 3.0,
+     "savedMonth": 2.9
+    },
+    {
+     "fn": "Filter tests by name; Select All",
+     "unit": "per cycle",
+     "basis": "Scrolling the Clash Detective test list to find the tests to change.",
+     "handH": 0.075,
+     "toolH": 0.007,
+     "handMonth": 0.3,
+     "savedMonth": 0.3
+    }
+   ]
   },
   {
    "id": "acc-vs-tidp-midp-checker",
@@ -380,7 +890,45 @@ export const costing = {
     "basis": "~10,000 deliverables by hand, including naming drift (extra suffixes, revision tags, casing).",
     "handH": 12.5,
     "toolH": 0.003
-   }
+   },
+   "fns": [
+    {
+     "fn": "Match every deliverable and format",
+     "unit": "per 1,000 deliverables",
+     "basis": "~10,000 deliverables by hand, including naming drift (extra suffixes, revision tags, casing).",
+     "handH": 12.5,
+     "toolH": 0.003,
+     "handMonth": 125.0,
+     "savedMonth": 125.0
+    },
+    {
+     "fn": "Build the Files Log",
+     "unit": "per 1,000 deliverables",
+     "basis": "Exporting or scanning the shared ACC folders of 20+ disciplines into a list, scoped to files that reached Shared.",
+     "handH": 0.75,
+     "toolH": 0.004,
+     "handMonth": 7.5,
+     "savedMonth": 7.5
+    },
+    {
+     "fn": "Compile the QA/QC report",
+     "unit": "per 1,000 deliverables",
+     "basis": "Listing missing, partial, duplicate and extra files and saving the report back to ACC.",
+     "handH": 0.375,
+     "toolH": 0.007,
+     "handMonth": 3.8,
+     "savedMonth": 3.7
+    },
+    {
+     "fn": "Load the schedule and map the columns",
+     "unit": "per 1,000 deliverables",
+     "basis": "Preparing the MIDP rows, finding the identifier, format and revision columns, filtering to filled rows across many tabs.",
+     "handH": 0.2,
+     "toolH": 0.007,
+     "handMonth": 2.0,
+     "savedMonth": 1.9
+    }
+   ]
   },
   {
    "id": "acc-model-health-check",
@@ -405,7 +953,45 @@ export const costing = {
     "basis": "Run the QA checklist in Revit and wait for it to finish. A model check takes about an hour in Revit; the web app returns every check, with its own score, in 2-3 seconds.",
     "handH": 1.0,
     "toolH": 0.001
-   }
+   },
+   "fns": [
+    {
+     "fn": "Run the checks",
+     "unit": "per model",
+     "basis": "Run the QA checklist in Revit and wait for it to finish. A model check takes about an hour in Revit; the web app returns every check, with its own score, in 2-3 seconds.",
+     "handH": 1.0,
+     "toolH": 0.001,
+     "handMonth": 250.0,
+     "savedMonth": 249.9
+    },
+    {
+     "fn": "Export and format the report",
+     "unit": "per model",
+     "basis": "Export the results and tidy them into a report.",
+     "handH": 0.2,
+     "toolH": 0.0,
+     "handMonth": 50.0,
+     "savedMonth": 50.0
+    },
+    {
+     "fn": "Save to ACC and keep track",
+     "unit": "per model",
+     "basis": "Upload the report to the right folder and tick the model off a list. The app saves each report as the model finishes.",
+     "handH": 0.15,
+     "toolH": 0.0,
+     "handMonth": 37.5,
+     "savedMonth": 37.5
+    },
+    {
+     "fn": "Open the model",
+     "unit": "per model",
+     "basis": "",
+     "handH": 0.15,
+     "toolH": 0.0,
+     "handMonth": 37.5,
+     "savedMonth": 37.4
+    }
+   ]
   },
   {
    "id": "meridian",
@@ -430,7 +1016,90 @@ export const costing = {
     "basis": "Walking each trade's ACC folders for ~200 models, checking versions and dates against the required list, flagging naming-rule breaks and stale files.",
     "handH": 12.0,
     "toolH": 0.3
-   }
+   },
+   "fns": [
+    {
+     "fn": "Model sharing (incl. NWC and NWD files)",
+     "unit": "per project per week",
+     "basis": "Walking each trade's ACC folders for ~200 models, checking versions and dates against the required list, flagging naming-rule breaks and stale files.",
+     "handH": 12.0,
+     "toolH": 0.3,
+     "handMonth": 311.8,
+     "savedMonth": 304.0
+    },
+    {
+     "fn": "Missing clash parameters",
+     "unit": "per project per week",
+     "basis": "Combining parameter-check results across 100-115 models, comparing runs, and splitting by trade, parameter and file; not practical by hand.",
+     "handH": 11.0,
+     "toolH": 0.15,
+     "handMonth": 285.8,
+     "savedMonth": 281.9
+    },
+    {
+     "fn": "Model performance",
+     "unit": "per project per week",
+     "basis": "Opening and rolling up health reports across ~200 models into scores by discipline, failing checks and trends.",
+     "handH": 7.5,
+     "toolH": 0.225,
+     "handMonth": 194.9,
+     "savedMonth": 189.0
+    },
+    {
+     "fn": "Exports and the full BIM QA/QC report",
+     "unit": "per project per week",
+     "basis": "Formatting an Excel or PDF pack with cover page and every board, each cycle.",
+     "handH": 6.0,
+     "toolH": 0.225,
+     "handMonth": 155.9,
+     "savedMonth": 150.0
+    },
+    {
+     "fn": "Issue tracking and Issue Status Dashboard",
+     "unit": "per project per week",
+     "basis": "Exporting ACC issues, then pivoting by trade, asset, company, age and type, and building a one-page status per building or zone.",
+     "handH": 6.0,
+     "toolH": 0.3,
+     "handMonth": 155.9,
+     "savedMonth": 148.1
+    },
+    {
+     "fn": "Clash report",
+     "unit": "per project per week",
+     "basis": "Building status and severity trends, the trade-against-trade matrix and package roll-ups from Clash Analyser exports.",
+     "handH": 4.5,
+     "toolH": 0.225,
+     "handMonth": 116.9,
+     "savedMonth": 111.1
+    },
+    {
+     "fn": "Overview",
+     "unit": "per project per week",
+     "basis": "Pulling headline KPIs, a ranked 'what to chase first' list and a project table together from every other report.",
+     "handH": 4.0,
+     "toolH": 0.225,
+     "handMonth": 103.9,
+     "savedMonth": 98.1
+    },
+    {
+     "fn": "TIDP/MIDP progress",
+     "unit": "per project per week",
+     "basis": "Reading the Checker's reports across packages and rolling completion up by trade and package.",
+     "handH": 3.0,
+     "toolH": 0.125,
+     "handMonth": 77.9,
+     "savedMonth": 74.7
+    },
+    {
+     "fn": "Viewpoints report",
+     "unit": "per project per week",
+     "basis": "Comparing viewpoint snapshots, tracking what is new, fixed or closed, and checking cross-verification.",
+     "handH": 3.0,
+     "toolH": 0.125,
+     "handMonth": 77.9,
+     "savedMonth": 74.7
+    }
+   ]
   },
   {
    "id": "add-in-control",
@@ -455,7 +1124,54 @@ export const costing = {
     "basis": "5-8 min per PC including closing Revit or Navisworks.",
     "handH": 5.5,
     "toolH": 0.0
-   }
+   },
+   "fns": [
+    {
+     "fn": "Run the installer on each PC",
+     "unit": "per release (50 PCs)",
+     "basis": "5-8 min per PC including closing Revit or Navisworks.",
+     "handH": 5.5,
+     "toolH": 0.0,
+     "handMonth": 5.5,
+     "savedMonth": 5.5
+    },
+    {
+     "fn": "Chase and support problem PCs",
+     "unit": "per release (50 PCs)",
+     "basis": "Failed installs, wrong versions, people who missed the email.",
+     "handH": 2.0,
+     "toolH": 0.0,
+     "handMonth": 2.0,
+     "savedMonth": 2.0
+    },
+    {
+     "fn": "Check who has what",
+     "unit": "per release (50 PCs)",
+     "basis": "Confirming versions and access per person; Devices and People pages do this automatically.",
+     "handH": 2.0,
+     "toolH": 0.0,
+     "handMonth": 2.0,
+     "savedMonth": 2.0
+    },
+    {
+     "fn": "Send the installer and instructions",
+     "unit": "per release (50 PCs)",
+     "basis": "Distributing the installer and what to do.",
+     "handH": 0.9,
+     "toolH": 0.0,
+     "handMonth": 0.9,
+     "savedMonth": 0.9
+    },
+    {
+     "fn": "Publish the release and check Devices",
+     "unit": "per release (50 PCs)",
+     "basis": "Upload the build, release it, glance at the Devices page.",
+     "handH": 0.0,
+     "toolH": 0.25,
+     "handMonth": 0.0,
+     "savedMonth": -0.2
+    }
+   ]
   }
  ]
 };

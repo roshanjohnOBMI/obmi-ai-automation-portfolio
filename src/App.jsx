@@ -1,6 +1,7 @@
 import Hero from "./components/Hero.jsx";
 import Meridian from "./components/Meridian.jsx";
 import Ribbons from "./components/Ribbons.jsx";
+import NavisworksShots from "./components/NavisworksShots.jsx";
 import ToolShots from "./components/ToolShots.jsx";
 import OutputClips from "./components/OutputClips.jsx";
 import BrandFilm from "./components/BrandFilm.jsx";
@@ -22,6 +23,7 @@ export default function App() {
           <a href="#reel">Reel</a>
           <a href="#meridian">Meridian</a>
           <a href="#ribbons">Add-ins</a>
+          <a href="#navisworks">Navisworks</a>
           <a href="#automations">Tools</a>
           <a href="#time">Time saved</a>
           <a href="#compare">Before / after</a>
@@ -35,6 +37,7 @@ export default function App() {
         <Meridian />
         <Ribbons />
         <ToolShots />
+        <NavisworksShots />
         <OutputClips />
         <AutomationSlider />
         <TimeCalculator />

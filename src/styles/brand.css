@@ -346,3 +346,22 @@ input[type="range"] { width: 100%; accent-color: var(--blue); height: 6px; curso
 .costing { margin-top: 3.5rem; }
 .costing__title { max-width: 1200px; margin: 3.5rem auto 1.2rem; font-size: clamp(1.8rem, 3.4vw, 2.8rem); color: var(--gold); }
 .costing { margin-top: 0; }
+
+/* ===== Whole-month compare + Navisworks section ===== */
+.compare__saved { margin: 1.2rem 0 0; color: var(--teal); font-size: 1.05rem; }
+.compare__note { padding-left: 0; margin-top: 1.4rem; }
+.fnlist { margin-top: 1.6rem; display: grid; gap: 0.7rem; max-width: 1100px; }
+.fnlist h4 { margin: 0 0 0.4rem; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+.fnrow { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr) auto; gap: 1rem; align-items: center; }
+.fnrow__name small { color: var(--ink-soft); }
+.fnrow__bars { display: grid; gap: 3px; }
+.fnrow__bars i { display: block; height: 7px; border-radius: 4px; }
+.fnrow__hand { background: var(--gold); }
+.fnrow__tool { background: var(--teal); }
+.fnrow__nums { font-size: 0.85rem; color: var(--ink-soft); white-space: nowrap; }
+.navtools { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 2.2rem auto; max-width: 1200px; }
+.navtool { background: var(--panel, #1c1e25); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
+.navtool h4 { margin: 0 0 0.4rem; color: var(--gold); }
+.navtool p { margin: 0 0 0.5rem; }
+.navtool__time b { color: var(--teal); }
+@media (max-width: 720px) { .fnrow { grid-template-columns: 1fr; gap: 0.3rem; } }
