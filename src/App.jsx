@@ -28,6 +28,7 @@ export default function App() {
           <a href="#time">Time saved</a>
           <a href="#compare">Before / after</a>
           <a href="#film">Film</a>
+          <a href="./overview.html">Overview</a>
         </nav>
       </header>
 
