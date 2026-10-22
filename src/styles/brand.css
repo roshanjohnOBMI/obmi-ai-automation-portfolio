@@ -332,3 +332,13 @@ input[type="range"] { width: 100%; accent-color: var(--blue); height: 6px; curso
   .shots .slider__arrow { display: none; }
   .compare { min-height: 420px; }
 }
+
+/* Compare: each pane keeps its content on its own side so both stay visible */
+.compare__pane--before .compare__time { left: 1.5rem; right: auto; }
+.compare__pane--before small { left: 1.5rem; right: auto; }
+.compare__pane--before .compare__what { max-width: 46ch; }
+.compare__pane--after { display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+.compare__pane--after .compare__what, .compare__pane--after .compare__sub { max-width: 40ch; }
+@media (max-width: 860px) {
+  .compare__pane--before .compare__what, .compare__pane--after .compare__what, .compare__pane--after .compare__sub { max-width: 22ch; font-size: 1rem; }
+}
