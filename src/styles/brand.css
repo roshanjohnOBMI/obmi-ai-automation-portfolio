@@ -344,3 +344,5 @@ input[type="range"] { width: 100%; accent-color: var(--blue); height: 6px; curso
 }
 
 .costing { margin-top: 3.5rem; }
+.costing__title { max-width: 1200px; margin: 3.5rem auto 1.2rem; font-size: clamp(1.8rem, 3.4vw, 2.8rem); color: var(--gold); }
+.costing { margin-top: 0; }

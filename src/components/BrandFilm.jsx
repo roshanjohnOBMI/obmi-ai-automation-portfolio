@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { costing } from "../data/costing.js";
+import { n0 } from "../lib/fmt.js";
 import { FILM_SRC, FILM_POSTER } from "../data/storyboard.js";
 
 const shots = [
@@ -19,6 +21,7 @@ export default function BrandFilm() {
         <video src={FILM_SRC} poster={FILM_POSTER} controls playsInline preload="none" />
       </div>
 
+      <h3 className="costing__title">{n0(costing.total.mid)} hours saved a month.</h3>
       <div className="costing">
         <figure className="costing__shot" key={s.img}>
           <img src={`./media/costing/${s.img}.jpg`} alt={`OBMI time-saved explorer, ${s.title}`} />
