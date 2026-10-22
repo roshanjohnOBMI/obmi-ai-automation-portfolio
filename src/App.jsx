@@ -1,9 +1,13 @@
 import Hero from "./components/Hero.jsx";
+import Meridian from "./components/Meridian.jsx";
+import Ribbons from "./components/Ribbons.jsx";
+import ToolShots from "./components/ToolShots.jsx";
+import OutputClips from "./components/OutputClips.jsx";
+import BrandFilm from "./components/BrandFilm.jsx";
 import VideoReel from "./components/VideoReel.jsx";
 import AutomationSlider from "./components/AutomationSlider.jsx";
 import TimeCalculator from "./components/TimeCalculator.jsx";
 import BeforeAfter from "./components/BeforeAfter.jsx";
-import StoryboardSlider from "./components/StoryboardSlider.jsx";
 import Stack from "./components/Stack.jsx";
 
 export default function App() {
@@ -16,20 +20,26 @@ export default function App() {
         </a>
         <nav className="nav__links">
           <a href="#reel">Reel</a>
-          <a href="#automations">Automations</a>
+          <a href="#meridian">Meridian</a>
+          <a href="#ribbons">Add-ins</a>
+          <a href="#automations">Tools</a>
           <a href="#time">Time saved</a>
           <a href="#compare">Before / after</a>
-          <a href="#stack">Stack</a>
+          <a href="#film">Film</a>
         </nav>
       </header>
 
       <main id="top">
         <Hero />
         <VideoReel />
+        <Meridian />
+        <Ribbons />
+        <ToolShots />
+        <OutputClips />
         <AutomationSlider />
         <TimeCalculator />
         <BeforeAfter />
-        <StoryboardSlider />
+        <BrandFilm />
         <Stack />
       </main>
 
@@ -41,7 +51,7 @@ export default function App() {
           </p>
         </div>
         <p className="footer__small">
-          Time-saved figures are editable estimates (see <code>src/data/automations.js</code>).
+          Time-saved figures are planning estimates from the OBMI time-saved explorer, not measurements (<code>src/data/costing.js</code>).
         </p>
       </footer>
     </>

@@ -1,22 +1,23 @@
 import { useMemo, useState } from "react";
-import { automations, BASE_TEAM } from "../data/automations.js";
+import { costing } from "../data/costing.js";
+import { h, n0 } from "../lib/fmt.js";
+
+const apps = costing.apps.map((a) => a.name);
 
 export default function TimeCalculator() {
-  const [team, setTeam] = useState(BASE_TEAM);
-  const [weeks, setWeeks] = useState(46);
-  const [runs, setRuns] = useState(100); // % of baseline usage
+  const [scale, setScale] = useState(100);
+  const [on, setOn] = useState(apps);
+  const [basis, setBasis] = useState("mid");
 
-  const rows = useMemo(() => {
-    const scale = (team / BASE_TEAM) * (runs / 100);
-    return automations.map((a) => {
-      const hrs = (((a.manualMinutes - a.autoMinutes) * a.runsPerWeek * scale * weeks) / 60);
-      return { id: a.id, name: a.name, hrs };
-    });
-  }, [team, weeks, runs]);
+  const toggle = (a) => setOn((cur) => (cur.includes(a) ? cur.filter((x) => x !== a) : [...cur, a]));
 
-  const total = rows.reduce((s, r) => s + r.hrs, 0);
-  const days = total / 8;
-  const max = Math.max(...rows.map((r) => r.hrs), 1);
+  const rows = useMemo(
+    () => costing.tools.filter((t) => on.includes(t.set)).map((t) => ({ ...t, v: (t[basis] * scale) / 100, lo: (t.low * scale) / 100, hi: (t.high * scale) / 100 })),
+    [on, scale, basis]
+  );
+  const total = rows.reduce((s, r) => s + r.v, 0);
+  const max = Math.max(...rows.map((r) => r.hi), 1);
+  const sorted = [...rows].sort((a, b) => b.v - a.v);
 
   return (
     <section id="time" className="section">
@@ -24,51 +25,54 @@ export default function TimeCalculator() {
         <p className="eyebrow">Time saved</p>
         <h2>Move the sliders. See the hours come back.</h2>
         <p className="muted">
-          Defaults are illustrative estimates. Swap in measured values in{" "}
-          <code>src/data/automations.js</code>.
+          Planning estimates from the OBMI time-saved explorer ({costing.total.functions} released functions), not measurements.
+          Reference: about 200 models across 20+ disciplines, a 100–115 model Navisworks federation each week, about 10,000 TIDP/MIDP deliverables a month.
         </p>
       </div>
 
       <div className="calc">
         <div className="calc__controls">
           <label className="range">
-            <span>
-              BIM team size <b>{team}</b>
-            </span>
-            <input type="range" min="1" max="60" value={team} onChange={(e) => setTeam(+e.target.value)} />
-          </label>
-          <label className="range">
-            <span>
-              Working weeks a year <b>{weeks}</b>
-            </span>
-            <input type="range" min="30" max="52" value={weeks} onChange={(e) => setWeeks(+e.target.value)} />
-          </label>
-          <label className="range">
-            <span>
-              Tool adoption <b>{runs}%</b>
-            </span>
-            <input type="range" min="10" max="200" step="10" value={runs} onChange={(e) => setRuns(+e.target.value)} />
+            <span>Volume vs the reference project <b>{scale}%</b></span>
+            <input type="range" min="25" max="200" step="5" value={scale} onChange={(e) => setScale(+e.target.value)} />
           </label>
 
+          <div className="range">
+            <span>Estimate</span>
+            <div className="segmented" role="group" aria-label="Estimate basis">
+              {[["low", "Low"], ["mid", "Mid"], ["high", "High"]].map(([k, l]) => (
+                <button key={k} className={basis === k ? "seg is-active" : "seg"} onClick={() => setBasis(k)}>{l}</button>
+              ))}
+            </div>
+          </div>
+
+          <div className="range">
+            <span>Applications</span>
+            <div className="chipsel">
+              {apps.map((a) => (
+                <button key={a} className={on.includes(a) ? "chipbtn is-on" : "chipbtn"} onClick={() => toggle(a)} aria-pressed={on.includes(a)}>{a}</button>
+              ))}
+            </div>
+          </div>
+
           <div className="calc__total">
-            <strong>{Math.round(total).toLocaleString()}</strong>
-            <span>hours back a year</span>
-            <small>≈ {Math.round(days).toLocaleString()} working days of design time</small>
+            <strong>{n0(total)}</strong>
+            <span>hours saved a month</span>
+            <small>≈ {(total / 160).toFixed(1)} full-time equivalents · {n0(total * 12)} hours a year</small>
           </div>
         </div>
 
         <ul className="calc__bars">
-          {rows.map((r) => (
+          {sorted.map((r) => (
             <li key={r.id}>
-              <div className="calc__label">
-                <span>{r.name}</span>
-                <b>{Math.round(r.hrs).toLocaleString()} h</b>
-              </div>
+              <div className="calc__label"><span>{r.name}</span><b>{h(r.v)} h</b></div>
               <div className="calc__track">
-                <i style={{ width: `${(r.hrs / max) * 100}%` }} />
+                <i style={{ width: `${(r.v / max) * 100}%` }} />
+                <u style={{ left: `${(r.lo / max) * 100}%`, width: `${Math.max(0.5, ((r.hi - r.lo) / max) * 100)}%` }} title="Low to high range" />
               </div>
             </li>
           ))}
+          {sorted.length === 0 && <li className="muted">Pick at least one application.</li>}
         </ul>
       </div>
     </section>
