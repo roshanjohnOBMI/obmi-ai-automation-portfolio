@@ -1,7 +1,7 @@
 const lead = { img: "fred", name: "Frederic", role: "Digital Delivery Lead" };
 const team = [
   { img: "roshan", name: "Roshan Kerketta", role: "BIM Manager" },
-  { img: "bharathi", name: "Bharathi", role: "BIM Architect" },
+  { img: "bharathi", name: "Bharathi", role: "BIM Coordinator" },
   { img: "muthu", name: "Muthukumar Ramasamy", role: "BIM Manager" },
   { img: "chandu", name: "Chandra Shekhar Tamaada", role: "BIM Coordinator" },
   { img: "shifkhan", name: "Shifkhan", role: "BIM Manager" },

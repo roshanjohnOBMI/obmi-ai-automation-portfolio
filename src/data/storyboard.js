@@ -1,6 +1,6 @@
 // Media paths (relative, so the site works on GitHub Pages under any repo name).
 export const REEL_SRC = "./media/obmi-office-drama.mp4";
-export const REEL_POSTER = "./media/poster.jpg";
+export const REEL_POSTER = "./media/flier/team.jpg"; // same thumbnail as the overview page
 export const FILM_SRC = "./media/obmi-brand-film.mp4";
 export const FILM_POSTER = "./media/posters/brand-film.jpg";
 
