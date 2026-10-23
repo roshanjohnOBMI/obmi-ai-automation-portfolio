@@ -390,3 +390,25 @@ input[type="range"] { width: 100%; accent-color: var(--blue); height: 6px; curso
 :root[data-theme="light"] .calc__track u { background: rgba(21, 23, 28, 0.6); }
 :root[data-theme="light"] .nav__logo { filter: invert(1) brightness(0.15); }
 :root[data-theme="light"] .nav { box-shadow: 0 1px 0 var(--line); }
+
+/* Creators */
+.creators { text-align: center; padding: 4rem clamp(1rem, 6vw, 5rem) 3rem; border-top: 1px solid var(--line); }
+.creators__built { font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; margin: 0; }
+.creators__made { margin: 0.9rem 0 1.6rem; }
+.creators figure { margin: 0; text-align: center; }
+.creators img { border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 0.6rem; background: #fff; border: 2px solid var(--line); }
+.creators figcaption b { display: block; font-size: 0.85rem; font-weight: 700; }
+.creators figcaption span { display: block; font-size: 0.72rem; color: var(--ink-soft); }
+.creators__lead { margin-bottom: 1.8rem !important; }
+.creators__lead img { width: 168px; height: 168px; border: 3px solid var(--gold); box-shadow: 0 0 0 7px rgba(252,190,38,0.14), 0 18px 40px rgba(0,0,0,0.35); }
+.creators__lead figcaption b { font-size: 1.15rem; }
+.creators__lead figcaption span { color: var(--gold); font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.creators__team { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.6rem 2.1rem; }
+.creators__team figure { width: 150px; }
+.creators__team img { width: 96px; height: 96px; }
+/* Meridian boards list */
+.mboards { list-style: none; padding: 0; margin: 2rem auto; max-width: 1200px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.9rem; counter-reset: b; }
+.mboards li { background: var(--sand); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; display: grid; gap: 0.25rem; }
+.mboards span { color: var(--gold); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; }
+.mboards b { font-size: 1rem; }
+.mboards em { font-style: normal; color: var(--ink-soft); font-size: 0.85rem; line-height: 1.5; }

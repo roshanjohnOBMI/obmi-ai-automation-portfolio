@@ -11,6 +11,7 @@ import AutomationSlider from "./components/AutomationSlider.jsx";
 import TimeCalculator from "./components/TimeCalculator.jsx";
 import BeforeAfter from "./components/BeforeAfter.jsx";
 import Stack from "./components/Stack.jsx";
+import Creators from "./components/Creators.jsx";
 
 function ThemeButton() {
   const [theme, setTheme] = useState(() => document.documentElement.getAttribute("data-theme") || "dark");
@@ -44,6 +45,7 @@ export default function App() {
           <a href="#time">Time saved</a>
           <a href="#compare">Before / after</a>
           <a href="#film">Film</a>
+          <a href="#creators">Creators</a>
         </nav>
         <div className="navright">
           <div className="viewswitch" role="group" aria-label="Switch view">
@@ -67,6 +69,7 @@ export default function App() {
         <BeforeAfter />
         <BrandFilm />
         <Stack />
+        <Creators />
       </main>
 
       <footer className="footer">
