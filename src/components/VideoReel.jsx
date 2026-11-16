@@ -30,7 +30,7 @@ export default function VideoReel() {
     <section id="reel" className="section section--wide">
       <div className="section__head">
         <p className="eyebrow">Brand reel</p>
-        <h2>Under a minute on how the work gets lighter.</h2>
+        <h2>Two minutes on how the work gets lighter.</h2>
       </div>
 
       <div className="reel">
